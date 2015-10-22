@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Game.h"
 
-@interface MyTableViewController : UITableViewController
+@interface MyTableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
+
+@property NSMutableArray *listOfAllGames;
+@property Game *thisGame;
+
+- (void)loadAllGamesIntoListOfAllGames;
 
 @end

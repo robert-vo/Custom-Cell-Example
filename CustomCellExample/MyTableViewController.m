@@ -7,6 +7,8 @@
 //
 
 #import "MyTableViewController.h"
+#import "MyTableViewCell.h"
+#import "Game.h"
 
 @interface MyTableViewController ()
 
@@ -14,85 +16,74 @@
 
 @implementation MyTableViewController
 
+@synthesize listOfAllGames, thisGame;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    listOfAllGames = [[NSMutableArray alloc] init];
+    [self loadAllGamesIntoListOfAllGames];
+    static NSString *myCellIdentifier = @"MyCustomCell";
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    UINib *nib = [UINib nibWithNibName:@"MyCustomCell" bundle:nil];
+    [self.tableView registerNib:nib forCellReuseIdentifier:myCellIdentifier];
+
+}
+
+- (void)loadAllGamesIntoListOfAllGames {
+    Game *game1 = [[Game alloc] init];
+    game1.gameTitle = @"Call of Duty";
+    game1.gameRating = @"IGN - 9.7/10";
+    game1.gameDescription = @"🔫💣🗡🔫💣🗡🔫💣🗡";
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    Game *game2 = [[Game alloc] init];
+    game2.gameTitle = @"Halo 5";
+    game2.gameRating = @"Not IGN - 9.9/10";
+    game2.gameDescription = @"Master Chief is back at it again.";
+    
+    Game *game3 = [[Game alloc] init];
+    game3.gameTitle = @"League of Legends";
+    game3.gameRating = @"5/10";
+    game3.gameDescription = @"Online game with lots of fun!";
+    
+    Game *game4 = [[Game alloc] init];
+    game4.gameTitle = @"Super Mario 64";
+    game4.gameRating = @"10/10";
+    game4.gameDescription = @"Revolutionary 3D game of its time.";
+    
+    [listOfAllGames addObject:game1];
+    [listOfAllGames addObject:game2];
+    [listOfAllGames addObject:game3];
+    [listOfAllGames addObject:game4];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
+-(NSInteger) tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section {
+    return 1;
+}
+
+-(NSInteger) numberOfRowsInSection:(UITableView*)tableView {
+    return 1;
+}
+
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
-}
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    MyTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyCustomCell" forIndexPath:indexPath];
     
+    cell.GameTitleLabel.text = @"test";
+    cell.GameRatingsLabel.text = @"hi";
+    cell.GameDescriptionLabel.text = @"hihi";
     // Configure the cell...
     
     return cell;
 }
-*/
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
