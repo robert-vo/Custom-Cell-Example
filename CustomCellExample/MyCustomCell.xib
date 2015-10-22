@@ -8,35 +8,32 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyCustomCell" rowHeight="101" id="zf8-hM-nQH" customClass="MyTableViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="381" height="101"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyCustomCell" rowHeight="91" id="zf8-hM-nQH" customClass="MyTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="381" height="91"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zf8-hM-nQH" id="zTH-VE-uDs">
-                <rect key="frame" x="0.0" y="0.0" width="381" height="100.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="381" height="91"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1W5-LJ-car">
-                        <rect key="frame" x="8" y="37" width="42" height="21"/>
+                        <rect key="frame" x="8" y="35" width="42" height="21"/>
                         <animations/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="21" id="Q1W-aA-ThH"/>
-                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGZ-tN-KaG">
-                        <rect key="frame" x="8" y="66" width="42" height="21"/>
+                        <rect key="frame" x="8" y="64" width="42" height="21"/>
                         <animations/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IYo-mM-1od">
-                        <rect key="frame" x="8" y="8" width="42" height="21"/>
+                        <rect key="frame" x="8" y="6" width="42" height="21"/>
                         <animations/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="21" id="DDw-Lb-NHC"/>
+                            <constraint firstAttribute="height" constant="21" id="Mm0-Xv-gWf"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -45,13 +42,14 @@
                 </subviews>
                 <animations/>
                 <constraints>
-                    <constraint firstAttribute="bottomMargin" secondItem="wGZ-tN-KaG" secondAttribute="bottom" constant="5.5" id="9rp-ZK-lCh"/>
-                    <constraint firstItem="wGZ-tN-KaG" firstAttribute="top" secondItem="1W5-LJ-car" secondAttribute="bottom" constant="8" symbolic="YES" id="Is9-2W-nXN"/>
-                    <constraint firstItem="IYo-mM-1od" firstAttribute="leading" secondItem="1W5-LJ-car" secondAttribute="leading" id="VoW-Is-NZN"/>
-                    <constraint firstItem="1W5-LJ-car" firstAttribute="leading" secondItem="wGZ-tN-KaG" secondAttribute="leading" id="Ymd-oR-vkX"/>
-                    <constraint firstItem="wGZ-tN-KaG" firstAttribute="leading" secondItem="zTH-VE-uDs" secondAttribute="leadingMargin" id="fnX-Et-gr9"/>
-                    <constraint firstItem="IYo-mM-1od" firstAttribute="top" secondItem="zTH-VE-uDs" secondAttribute="topMargin" id="vVt-bI-lFy"/>
-                    <constraint firstItem="1W5-LJ-car" firstAttribute="top" secondItem="IYo-mM-1od" secondAttribute="bottom" constant="8" symbolic="YES" id="zOW-2o-So7"/>
+                    <constraint firstItem="IYo-mM-1od" firstAttribute="top" secondItem="zTH-VE-uDs" secondAttribute="topMargin" constant="-2" id="1zw-vj-OQQ"/>
+                    <constraint firstItem="1W5-LJ-car" firstAttribute="leading" secondItem="IYo-mM-1od" secondAttribute="leading" id="CbQ-IF-xja"/>
+                    <constraint firstItem="wGZ-tN-KaG" firstAttribute="leading" secondItem="1W5-LJ-car" secondAttribute="leading" id="JJp-e9-yHL"/>
+                    <constraint firstItem="wGZ-tN-KaG" firstAttribute="top" secondItem="1W5-LJ-car" secondAttribute="bottom" constant="8" symbolic="YES" id="S7S-jh-xlX"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="wGZ-tN-KaG" secondAttribute="bottom" constant="-2.5" id="S8t-R7-HWa"/>
+                    <constraint firstItem="1W5-LJ-car" firstAttribute="top" secondItem="IYo-mM-1od" secondAttribute="bottom" constant="8" symbolic="YES" id="sgR-MS-0nQ"/>
+                    <constraint firstItem="1W5-LJ-car" firstAttribute="centerY" secondItem="zTH-VE-uDs" secondAttribute="centerY" id="vKC-9T-Ild"/>
+                    <constraint firstItem="wGZ-tN-KaG" firstAttribute="leading" secondItem="zTH-VE-uDs" secondAttribute="leadingMargin" id="wPP-t2-yG2"/>
                 </constraints>
             </tableViewCellContentView>
             <animations/>
@@ -60,7 +58,7 @@
                 <outlet property="GameRatingsLabel" destination="1W5-LJ-car" id="eyO-lo-fAc"/>
                 <outlet property="GameTitleLabel" destination="IYo-mM-1od" id="qcO-Vi-i4g"/>
             </connections>
-            <point key="canvasLocation" x="365.5" y="323.5"/>
+            <point key="canvasLocation" x="362.5" y="348.5"/>
         </tableViewCell>
     </objects>
 </document>
