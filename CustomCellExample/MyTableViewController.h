@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MyTableViewController.h
 //  CustomCellExample
 //
 //  Created by Robert Vo on 10/21/15.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface MyTableViewController : UIViewController
 
 
 @end

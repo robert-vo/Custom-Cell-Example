@@ -1,18 +1,18 @@
 //
-//  ViewController.m
+//  MyTableViewController.m
 //  CustomCellExample
 //
 //  Created by Robert Vo on 10/21/15.
 //  Copyright © 2015 Robert Vo. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "MyTableViewController.h"
 
-@interface ViewController ()
+@interface MyTableViewController ()
 
 @end
 
-@implementation ViewController
+@implementation MyTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
