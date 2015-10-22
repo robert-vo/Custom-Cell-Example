@@ -16,7 +16,7 @@
 
 @implementation MyTableViewController
 
-@synthesize listOfAllGames, thisGame;
+@synthesize listOfAllGames;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -61,27 +61,25 @@
 }
 
 -(NSInteger) tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return [listOfAllGames count];
 }
-
--(NSInteger) numberOfRowsInSection:(UITableView*)tableView {
-    return 1;
-}
-
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 125;
+}
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     MyTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyCustomCell" forIndexPath:indexPath];
+    Game *thisGame = [listOfAllGames objectAtIndex:indexPath.row];
     
-    cell.GameTitleLabel.text = @"test";
-    cell.GameRatingsLabel.text = @"hi";
-    cell.GameDescriptionLabel.text = @"hihi";
-    // Configure the cell...
+    cell.GameTitleLabel.text = thisGame.gameTitle;
+    cell.GameRatingsLabel.text = thisGame.gameRating;
+    cell.GameDescriptionLabel.text = thisGame.gameDescription;
     
     return cell;
 }
