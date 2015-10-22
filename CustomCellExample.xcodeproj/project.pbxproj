@@ -9,10 +9,13 @@
 /* Begin PBXBuildFile section */
 		E1C3E0641BD88BEA00D57730 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C3E0631BD88BEA00D57730 /* main.m */; };
 		E1C3E0671BD88BEA00D57730 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C3E0661BD88BEA00D57730 /* AppDelegate.m */; };
-		E1C3E06A1BD88BEA00D57730 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C3E0691BD88BEA00D57730 /* ViewController.m */; };
 		E1C3E06D1BD88BEA00D57730 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1C3E06B1BD88BEA00D57730 /* Main.storyboard */; };
 		E1C3E06F1BD88BEA00D57730 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1C3E06E1BD88BEA00D57730 /* Assets.xcassets */; };
 		E1C3E0721BD88BEA00D57730 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1C3E0701BD88BEA00D57730 /* LaunchScreen.storyboard */; };
+		E1C3E07B1BD88D9B00D57730 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C3E07A1BD88D9B00D57730 /* MyTableViewController.m */; };
+		E1C3E07D1BD88EF200D57730 /* MyCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1C3E07C1BD88EF200D57730 /* MyCustomCell.xib */; };
+		E1C3E0801BD8909900D57730 /* MyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C3E07F1BD8909900D57730 /* MyTableViewCell.m */; };
+		E1C3E0831BD8920100D57730 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C3E0821BD8920100D57730 /* Game.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +23,17 @@
 		E1C3E0631BD88BEA00D57730 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E1C3E0651BD88BEA00D57730 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E1C3E0661BD88BEA00D57730 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E1C3E0681BD88BEA00D57730 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E1C3E0691BD88BEA00D57730 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E1C3E06C1BD88BEA00D57730 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E1C3E06E1BD88BEA00D57730 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1C3E0711BD88BEA00D57730 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E1C3E0731BD88BEA00D57730 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1C3E0791BD88D9B00D57730 /* MyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewController.h; sourceTree = "<group>"; };
+		E1C3E07A1BD88D9B00D57730 /* MyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewController.m; sourceTree = "<group>"; };
+		E1C3E07C1BD88EF200D57730 /* MyCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCustomCell.xib; sourceTree = "<group>"; };
+		E1C3E07E1BD8909900D57730 /* MyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewCell.h; sourceTree = "<group>"; };
+		E1C3E07F1BD8909900D57730 /* MyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewCell.m; sourceTree = "<group>"; };
+		E1C3E0811BD8920100D57730 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		E1C3E0821BD8920100D57730 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +68,13 @@
 			children = (
 				E1C3E0651BD88BEA00D57730 /* AppDelegate.h */,
 				E1C3E0661BD88BEA00D57730 /* AppDelegate.m */,
-				E1C3E0681BD88BEA00D57730 /* ViewController.h */,
-				E1C3E0691BD88BEA00D57730 /* ViewController.m */,
+				E1C3E0791BD88D9B00D57730 /* MyTableViewController.h */,
+				E1C3E07A1BD88D9B00D57730 /* MyTableViewController.m */,
+				E1C3E0811BD8920100D57730 /* Game.h */,
+				E1C3E0821BD8920100D57730 /* Game.m */,
+				E1C3E07C1BD88EF200D57730 /* MyCustomCell.xib */,
+				E1C3E07E1BD8909900D57730 /* MyTableViewCell.h */,
+				E1C3E07F1BD8909900D57730 /* MyTableViewCell.m */,
 				E1C3E06B1BD88BEA00D57730 /* Main.storyboard */,
 				E1C3E06E1BD88BEA00D57730 /* Assets.xcassets */,
 				E1C3E0701BD88BEA00D57730 /* LaunchScreen.storyboard */,
@@ -138,6 +151,7 @@
 			files = (
 				E1C3E0721BD88BEA00D57730 /* LaunchScreen.storyboard in Resources */,
 				E1C3E06F1BD88BEA00D57730 /* Assets.xcassets in Resources */,
+				E1C3E07D1BD88EF200D57730 /* MyCustomCell.xib in Resources */,
 				E1C3E06D1BD88BEA00D57730 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,9 +163,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1C3E06A1BD88BEA00D57730 /* ViewController.m in Sources */,
+				E1C3E0831BD8920100D57730 /* Game.m in Sources */,
 				E1C3E0671BD88BEA00D57730 /* AppDelegate.m in Sources */,
+				E1C3E0801BD8909900D57730 /* MyTableViewCell.m in Sources */,
 				E1C3E0641BD88BEA00D57730 /* main.m in Sources */,
+				E1C3E07B1BD88D9B00D57730 /* MyTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
