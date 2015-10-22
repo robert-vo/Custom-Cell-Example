@@ -8,6 +8,7 @@
 
 #import "MyTableViewCell.h"
 #import "MyTableViewController.h"
+#import "Game.h"
 
 @implementation MyTableViewCell
 
