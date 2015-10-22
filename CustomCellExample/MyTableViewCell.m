@@ -1,14 +1,6 @@
-//
-//  MyTableViewCell.m
-//  CustomCellExample
-//
-//  Created by Robert Vo on 10/21/15.
-//  Copyright © 2015 Robert Vo. All rights reserved.
-//
+//Again, no implementation is needed, but I have left the methods here from the initial creation of this file.
 
 #import "MyTableViewCell.h"
-#import "MyTableViewController.h"
-#import "Game.h"
 
 @implementation MyTableViewCell
 

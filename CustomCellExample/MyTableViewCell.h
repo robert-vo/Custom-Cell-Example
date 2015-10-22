@@ -1,10 +1,5 @@
-//
-//  MyTableViewCell.h
-//  CustomCellExample
-//
-//  Created by Robert Vo on 10/21/15.
-//  Copyright © 2015 Robert Vo. All rights reserved.
-//
+//This is for MyCustomCell.xib.
+//This is needed so the labels in the custom cell can be changed.
 
 #import <UIKit/UIKit.h>
 

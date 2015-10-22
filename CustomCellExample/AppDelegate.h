@@ -1,10 +1,4 @@
-//
-//  AppDelegate.h
-//  CustomCellExample
-//
-//  Created by Robert Vo on 10/21/15.
-//  Copyright © 2015 Robert Vo. All rights reserved.
-//
+//Why are you looking in here? Look elsewhere! 🚨
 
 #import <UIKit/UIKit.h>
 

@@ -1,5 +1,5 @@
 //
-//  TheTableViewController.h
+//  MyTableViewController.h
 //  CustomCellExample
 //
 //  Created by Robert Vo on 10/21/15.
@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Game.h"
 
+//Implement the delegates "UITableViewDelegate" and "UITableViewDataSource".
 @interface MyTableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
 
+//Added a property, listOfAllGames, that will store all of the games to be used.
 @property NSMutableArray *listOfAllGames;
 
 - (void)loadAllGamesIntoListOfAllGames;

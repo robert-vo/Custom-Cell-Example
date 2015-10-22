@@ -1,10 +1,4 @@
-//
-//  Game.m
-//  CustomCellExample
-//
-//  Created by Robert Vo on 10/21/15.
-//  Copyright © 2015 Robert Vo. All rights reserved.
-//
+//No implementation methods are needed.
 
 #import "Game.h"
 

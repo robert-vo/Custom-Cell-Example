@@ -1,10 +1,4 @@
-//
-//  Game.h
-//  CustomCellExample
-//
-//  Created by Robert Vo on 10/21/15.
-//  Copyright © 2015 Robert Vo. All rights reserved.
-//
+//Plain old game object with a title, rating, and description.
 
 #import <Foundation/Foundation.h>
 
