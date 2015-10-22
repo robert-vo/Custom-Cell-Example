@@ -28,6 +28,8 @@
     //Merely initializing the array. The array is mutable since we are adding objects to it one at a time.
     listOfAllGames = [[NSMutableArray alloc] init];
     
+    self.navigationController.topViewController.title = @"🎮🎮🎮🎮🎮Games🎮🎮🎮🎮🎮";
+
     [self loadAllGamesIntoListOfAllGames];
     
     
@@ -39,8 +41,69 @@
     static NSString *myCellIdentifier = @"MyCustomCell";
     UINib *nib = [UINib nibWithNibName:@"MyCustomCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:myCellIdentifier];
+    
+    //Code needed to add left and right swipe gesture recognizers on the table.
+    UISwipeGestureRecognizer *recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self
+                                                                                     action:@selector(leftSwipe:)];
+    [recognizer setDirection:(UISwipeGestureRecognizerDirectionLeft)];
+    [self.tableView addGestureRecognizer:recognizer];
+    
+    recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self
+                                                           action:@selector(rightSwipe:)];
+    [recognizer setDirection:(UISwipeGestureRecognizerDirectionRight)];
+    [self.tableView addGestureRecognizer:recognizer];
 
 }
+
+- (void)leftSwipe:(UISwipeGestureRecognizer *)gestureRecognizer
+{
+    NSString *alertMessage = @"You have swiped left!";
+    
+    //Prepares and displays alert.
+    UIAlertController *alert = [UIAlertController
+                                alertControllerWithTitle:@"Left!"
+                                message: alertMessage
+                                preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *okayButton = [UIAlertAction
+                                 actionWithTitle:@"Okay"
+                                 style:UIAlertActionStyleDefault
+                                 handler:^(UIAlertAction * action) {
+                                     //The alert is dismisses when the user hits "Okay".
+                                     [alert dismissViewControllerAnimated:YES completion:nil];
+                                 }];
+    [alert addAction:okayButton];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+- (void)rightSwipe:(UISwipeGestureRecognizer *)gestureRecognizer
+{
+    NSString *alertMessage = @"You have swiped right! This game entry will now be deleted. 😱😢";
+    
+    //Prepares and displays alert.
+    UIAlertController *alert = [UIAlertController
+                                alertControllerWithTitle:@"DELETED!"
+                                message: alertMessage
+                                preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *okayButton = [UIAlertAction
+                                 actionWithTitle:@"Okay"
+                                 style:UIAlertActionStyleDefault
+                                 handler:^(UIAlertAction * action) {
+                                     //The alert is dismisses when the user hits "Okay".
+                                     [alert dismissViewControllerAnimated:YES completion:nil];
+                                 }];
+    [alert addAction:okayButton];
+    [self presentViewController:alert animated:YES completion:nil];
+
+    
+    CGPoint location = [gestureRecognizer locationInView:self.tableView];
+    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:location];
+    [listOfAllGames removeObject:[listOfAllGames objectAtIndex:indexPath.row]];
+    [self.tableView reloadData];
+}
+
+
 
 //Creates Game objects and sets the attributes of the Game objects.
 - (void)loadAllGamesIntoListOfAllGames {
@@ -76,7 +139,7 @@
 
 //This method creates the number of rows in the table view.
 -(NSInteger) tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section {
-    return [listOfAllGames count];
+    return MAX([listOfAllGames count], 1);
 }
 
 //Keep it at 1.
@@ -95,12 +158,19 @@
  */
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     MyTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyCustomCell" forIndexPath:indexPath];
-    Game *thisGame = [listOfAllGames objectAtIndex:indexPath.row];
     
-    cell.GameTitleLabel.text = thisGame.gameTitle;
-    cell.GameRatingsLabel.text = thisGame.gameRating;
-    cell.GameDescriptionLabel.text = thisGame.gameDescription;
-    
+    if([listOfAllGames count] > 0) {
+        Game *thisGame = [listOfAllGames objectAtIndex:indexPath.row];
+        cell.GameTitleLabel.text = thisGame.gameTitle;
+        cell.GameRatingsLabel.text = thisGame.gameRating;
+        cell.GameDescriptionLabel.text = thisGame.gameDescription;
+    }
+    else {
+        cell.GameTitleLabel.text = @"Nothing :(";
+        cell.GameRatingsLabel.text = @"Nothing :(";
+        cell.GameDescriptionLabel.text = @"Nothing :(";
+
+    }
     return cell;
 }
 
